@@ -1,0 +1,67 @@
+.feedback {
+  background-color: var(--color-light-4);
+
+  &__item {
+    position: relative;
+    max-width: 363px;
+    overflow: hidden;
+
+    &:hover > .feedback__texts {
+      opacity: 0;
+    }
+
+    &:hover > .feedback__button {
+      opacity: 1;
+    }
+  }
+
+  &__video {
+    border-radius: 34px;
+
+    &[poster] {
+      height: 646px;
+      object-fit: cover;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+
+    transition: opacity .25s;
+  }
+
+  &__texts {
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+
+    padding: 20px 35px;
+
+    opacity: 1;
+
+    border-radius: 0 0 34px 34px;
+    width: 363px;
+    height: 157px;
+    background: rgba(252, 151, 115, 0.70);
+
+    transition: opacity .25s;
+  }
+
+  &__name {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--color-light-1)
+  }
+
+  &__text {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color-light-1)
+  }
+}

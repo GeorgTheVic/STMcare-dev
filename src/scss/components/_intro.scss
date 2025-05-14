@@ -1,0 +1,51 @@
+.intro {
+  height: 100vh;
+  background: url('/img/intro/intro-bg.jpg') center/cover no-repeat;
+
+  &__inner {
+    padding: 224px 0 113px;
+  }
+
+  &__title {
+    margin-bottom: 28px;
+    font-weight: 900;
+    font-size: 49px;
+    color: var(--color-light-1);
+
+    &-big {
+      font-size: 53px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 14px;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--color-light-1);
+  }
+
+  &__item {
+    margin-bottom: 8px;
+    font-weight: 800;
+    color: var(--color-gray-1);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--color-light-1);
+
+    border-radius: 32px;
+    padding: 25px 44px 22px;
+    background: var(--color-main-3);
+  }
+}
