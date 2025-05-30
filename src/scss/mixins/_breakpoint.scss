@@ -18,6 +18,12 @@
   }
 }
 
+@mixin small-tablet-min {
+  @media (min-width: (768px)) {
+    @content;
+  }
+}
+
 @mixin small-tablet {
   @media (max-width: (768px)) {
     @content;

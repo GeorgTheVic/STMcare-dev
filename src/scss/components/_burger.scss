@@ -1,0 +1,75 @@
+.burger {
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+  background-color: var(--color-main-2);
+
+  @include small-tablet-min {
+    display: none;
+  }
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 3px;
+
+    background-color: var(--color-dark);
+
+    &:first-child {
+      margin-top: -9px;
+    }
+
+    &:last-child {
+      margin-top: 9px;
+    }
+  }
+}
+
+.burger-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 500;
+  width: 35px;
+  height: 35px;
+
+  border: 1px solid var(--color-light-1);
+  border-radius: 10px;
+  background-color: var(--color-main-2);
+
+  @include small-tablet-min {
+    display: none;
+  }
+
+  &__line {
+    position: absolute;
+    top: 45%;
+    left: 12%;
+
+    transform: translate(-50%, -50%);
+
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 3px;
+
+    background-color: var(--color-light-1);
+
+    &:first-child {
+      transform: rotate(45deg);
+    }
+
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}

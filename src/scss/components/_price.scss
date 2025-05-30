@@ -3,7 +3,7 @@
 
   &__inner {
     padding: 35px 0 100px;
-    background: url('/img/price/price-bg.png') center/cover no-repeat;
+    background: url('../img/price/price-bg.png') center/cover no-repeat;
   }
 
   &__old {
@@ -13,6 +13,10 @@
     font-weight: 500;
     font-size: 64px;
     opacity: 0.5;
+
+    @include mobile {
+      font-size: 50px;
+    }
 
     &::after {
       content: "";
@@ -25,6 +29,10 @@
       background-color: var(--color-main-4);
       border-radius: 10px;
       transform: translate(-50%, -50%) rotate(5deg);
+
+      @include mobile {
+        width: 300px;
+      }
     }
   }
 
@@ -33,6 +41,10 @@
     font-weight: 500;
     font-size: 44px;
     text-align: center;
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   &__cost {
@@ -46,6 +58,10 @@
     max-width: 546px;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.7);
+
+    @include mobile {
+      font-size: 60px;
+    }
   }
 
   &__present-block {
@@ -55,6 +71,10 @@
     gap: 15px;
 
     margin-bottom: 120px;
+
+    @include mobile {
+      margin-bottom: 60px;
+    }
   }
 
   &__present-text {
@@ -74,11 +94,25 @@
 
     border-radius: 32px;
     background-color: var(--color-main-3);
+
+    transition: transform .3s;
+
+    @include mobile {
+      font-size: 20px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   &__subtext {
     font-weight: 400;
     font-size: 30px;
-    text-align: center; 
+    text-align: center;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 }

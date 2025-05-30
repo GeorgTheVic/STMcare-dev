@@ -1,14 +1,80 @@
 .nav {
-  width: 302px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+
+  @include small-tablet {
+    // display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 500;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--color-main-3);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+  }
 
   &__list {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+
+    @include small-tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      
+      width: 100%;
+      height: 100%;
+
+    }
   }
 
   &__link {
+    position: relative;
     font-weight: 500;
     font-size: 14px;
     color: var(--color-dark);
+
+    @include small-tablet {
+      color: var(--color-light-1);
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 0;
+      height: 3px;
+      border-radius: 10px;
+
+      background-color: var(--color-main-1);
+
+      transition: width .3s;
+
+      @include small-tablet {
+        background-color: var(--color-dark);
+      }
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
   }
+}
+
+.menu--active {
+  opacity: 1;
+  visibility: visible;
 }

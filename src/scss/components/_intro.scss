@@ -1,9 +1,17 @@
 .intro {
   height: 100vh;
-  background: url('/img/intro/intro-bg.jpg') center/cover no-repeat;
+  background: url('../img/intro/intro-bg.jpg') center/cover no-repeat;
+
+  @include mobile {
+    height: 1000px;
+  }
 
   &__inner {
     padding: 224px 0 113px;
+
+    @include mobile {
+      padding: 260px 0 0;
+    }
   }
 
   &__title {
@@ -12,8 +20,17 @@
     font-size: 49px;
     color: var(--color-light-1);
 
+    @include small-tablet {
+      margin-bottom: 40px;
+      font-size: 39px;
+    }
+
     &-big {
       font-size: 53px;
+
+      @include small-tablet {
+        font-size: 43px;
+      }
     }
   }
 
@@ -36,6 +53,11 @@
 
   &__list {
     margin-bottom: 40px;
+
+    @include small-tablet {
+      margin-top: 80px;
+      margin-bottom: 60px;
+    }
   }
 
   &__button {
@@ -47,5 +69,11 @@
     border-radius: 32px;
     padding: 25px 44px 22px;
     background: var(--color-main-3);
+
+    transition: .3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

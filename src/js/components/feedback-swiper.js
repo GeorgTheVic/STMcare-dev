@@ -1,10 +1,10 @@
 import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
-Swiper.use([Pagination]);
-const swiper = new Swiper('.feedback__swiper', {
-  slidesPerView: 3,
-  spaceBetween: 10,
-  pagination: {
-    el: '.swiper-pagination',
-  },
-});
+import { Pagination, Mousewheel, Autoplay } from 'swiper/modules';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const feedback_swiper = new Swiper('.feedback__swiper', {
+    modules: [Pagination, Mousewheel, Autoplay],
+    slidesPerView: 3,
+    spaceBetween: 5,
+  });
+})

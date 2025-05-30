@@ -1,24 +1,30 @@
-const videoPlayer = document.querySelector('.feedback__item'),
-  video = videoPlayer.querySelector('.feedback__video'),
-  button = videoPlayer.querySelector('.feedback__button'),
-  texts = document.querySelector('.feedback__texts')
+const videoPlayer_list = document.querySelectorAll('.feedback__item'),
+  video_list = document.querySelectorAll('.feedback__video'),
+  button_list = document.querySelectorAll('.feedback__button'),
+  text_list = document.querySelectorAll('.feedback__texts')
 
-video.addEventListener('play', () => {
-  texts.style.opacity = '0'
+video_list.forEach((video) => {
+  video.addEventListener('play', (e) => {
+    video.nextElementSibling.nextElementSibling.style.opacity = '0'
+  })
 })
 
-video.addEventListener('ended', () => {
-  button.style.opacity = '1'
+video_list.forEach((video) => {
+  video.addEventListener('ended', () => {
+    video.nextElementSibling.style.opacity = '1'
 
-  texts.style.opacity = '1'
+    video.nextElementSibling.nextElementSibling.style.opacity = '1'
+  })
 })
 
-videoPlayer.addEventListener('click', () => {
-  if (video.paused) {
-    video.play()
-    button.style.opacity = '0'
-  } else {
-    video.pause()
-    button.style.opacity = '1'
-  }
+videoPlayer_list.forEach((videoPlayer) => {
+  videoPlayer.addEventListener('click', () => {
+    if (videoPlayer.firstElementChild.paused) {
+      videoPlayer.firstElementChild.play()
+      videoPlayer.firstElementChild.nextElementSibling.style.opacity = '0'
+    } else {
+      videoPlayer.firstElementChild.pause()
+      videoPlayer.firstElementChild.nextElementSibling.style.opacity = '1'
+    }
+  })
 })

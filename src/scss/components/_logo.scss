@@ -8,4 +8,10 @@
 
   border-radius: 28px;
   background-color: var(--color-main-2);
+
+  transition: transform .3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
