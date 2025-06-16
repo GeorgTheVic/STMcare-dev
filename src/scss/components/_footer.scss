@@ -1,9 +1,21 @@
 .footer {
+  position: relative;
   background: url('../img/footer/footer-bg.jpg') center/cover no-repeat;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-main-7);
+    opacity: 0.5;
+    z-index: -1;
+  }
 
   &__inner {
     padding: 100px 0;
     text-align: center;
+    z-index: 1;
   }
 
   &__title {
