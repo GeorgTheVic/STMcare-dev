@@ -52,12 +52,18 @@
   }
 
   &__list {
-    margin-bottom: 40px;
+    @include mobile {
+      padding: 20px 10px;
+      background-color: var(--color-bg-1);
+      border-radius: 10px;
+    }
 
     @include small-tablet {
       margin-top: 80px;
       margin-bottom: 60px;
     }
+
+    margin-bottom: 40px;
   }
 
   &__button {
