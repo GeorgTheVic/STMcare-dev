@@ -1,7 +1,7 @@
 const footerMail = document.querySelector('.footer__mail'),
   footerPhone = document.querySelector('.footer__phone'),
   phoneNumber = 'tel:+77002299803',
-  mail = 'mailto:stmcare@gmail.com'
+  mail = 'mailto:stmcare.course@gmail.com'
 
 function clearHref(link) {
   link.href = ''
